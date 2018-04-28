@@ -12,6 +12,9 @@
 		19B8AC482094EDA200CC379F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B8AC462094EDA200CC379F /* Main.storyboard */; };
 		19B8AC4A2094EDA600CC379F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B8AC492094EDA600CC379F /* Assets.xcassets */; };
 		19B8AC4D2094EDA600CC379F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B8AC4B2094EDA600CC379F /* LaunchScreen.storyboard */; };
+		19B8AC5E20952E5A00CC379F /* TitleAndTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8AC5D20952E5A00CC379F /* TitleAndTextView.swift */; };
+		19B8AC6020952E9F00CC379F /* ObserverKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8AC5F20952E9F00CC379F /* ObserverKeys.swift */; };
+		93EBEAB1E8504A53A68CB63E /* Pods_observer_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E972EC01B39C1F129A2DA98 /* Pods_observer_example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		19B8AC492094EDA600CC379F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19B8AC4C2094EDA600CC379F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B8AC4E2094EDA600CC379F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B8AC5D20952E5A00CC379F /* TitleAndTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndTextView.swift; sourceTree = "<group>"; };
+		19B8AC5F20952E9F00CC379F /* ObserverKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverKeys.swift; sourceTree = "<group>"; };
+		8BFC0A41B961AD599EC74961 /* Pods-observer-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-observer-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-observer-example/Pods-observer-example.release.xcconfig"; sourceTree = "<group>"; };
+		8E972EC01B39C1F129A2DA98 /* Pods_observer_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_observer_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19E672561D7D8996FA20CDE /* Pods-observer-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-observer-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-observer-example/Pods-observer-example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EBEAB1E8504A53A68CB63E /* Pods_observer_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				19B8AC412094EDA200CC379F /* observer-example */,
 				19B8AC402094EDA200CC379F /* Products */,
+				2858793D0187AF90A7C08954 /* Pods */,
+				C06E674D1C5C204D4423BBB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +66,32 @@
 			isa = PBXGroup;
 			children = (
 				19B8AC422094EDA200CC379F /* AppDelegate.swift */,
+				19B8AC5F20952E9F00CC379F /* ObserverKeys.swift */,
 				19B8AC442094EDA200CC379F /* ViewController.swift */,
+				19B8AC5D20952E5A00CC379F /* TitleAndTextView.swift */,
 				19B8AC462094EDA200CC379F /* Main.storyboard */,
 				19B8AC492094EDA600CC379F /* Assets.xcassets */,
 				19B8AC4B2094EDA600CC379F /* LaunchScreen.storyboard */,
 				19B8AC4E2094EDA600CC379F /* Info.plist */,
 			);
 			path = "observer-example";
+			sourceTree = "<group>";
+		};
+		2858793D0187AF90A7C08954 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E19E672561D7D8996FA20CDE /* Pods-observer-example.debug.xcconfig */,
+				8BFC0A41B961AD599EC74961 /* Pods-observer-example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C06E674D1C5C204D4423BBB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E972EC01B39C1F129A2DA98 /* Pods_observer_example.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19B8AC512094EDA600CC379F /* Build configuration list for PBXNativeTarget "observer-example" */;
 			buildPhases = (
+				A5F1B1B5F2097B1D207D66E2 /* [CP] Check Pods Manifest.lock */,
 				19B8AC3B2094EDA200CC379F /* Sources */,
 				19B8AC3C2094EDA200CC379F /* Frameworks */,
 				19B8AC3D2094EDA200CC379F /* Resources */,
+				ABBB8320D64EB7F4879DA01D /* [CP] Embed Pods Frameworks */,
+				BEF46D269A1A4F81DCCE5D5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,11 +163,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A5F1B1B5F2097B1D207D66E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-observer-example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBB8320D64EB7F4879DA01D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-observer-example/Pods-observer-example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-observer-example/Pods-observer-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEF46D269A1A4F81DCCE5D5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-observer-example/Pods-observer-example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		19B8AC3B2094EDA200CC379F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B8AC5E20952E5A00CC379F /* TitleAndTextView.swift in Sources */,
+				19B8AC6020952E9F00CC379F /* ObserverKeys.swift in Sources */,
 				19B8AC452094EDA200CC379F /* ViewController.swift in Sources */,
 				19B8AC432094EDA200CC379F /* AppDelegate.swift in Sources */,
 			);
@@ -278,11 +367,13 @@
 		};
 		19B8AC522094EDA600CC379F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19E672561D7D8996FA20CDE /* Pods-observer-example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4DLFF7ES3L;
 				INFOPLIST_FILE = "observer-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +387,13 @@
 		};
 		19B8AC532094EDA600CC379F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BFC0A41B961AD599EC74961 /* Pods-observer-example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4DLFF7ES3L;
 				INFOPLIST_FILE = "observer-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
