@@ -10,11 +10,13 @@ import SnapKit
 
 class TitleAndTextView: UIView {
 
-    // MARK: - Properties
+    // MARK: - Class Properties. Fun fact: emojis are just stirng literals
     private let titleLabel = UILabel()
+    private let emoji = UILabel()
     private var subTitleLabel = UILabel()
 
     // MARK: - Init
+    // The call to `configUI()` is what actually sets up our screen's components w/ auto layout
     init() {
         super.init(frame: .zero)
         self.configObservers()
@@ -28,27 +30,60 @@ class TitleAndTextView: UIView {
     // Initialize Observers
     private func configObservers() {
         let tealNotificationName = Notification.Name(rawValue: ObserverKeys.teal)
-        NotificationCenter.default.addObserver(self, selector: #selector(changeSubTitleToTeal(notification:)), name: tealNotificationName, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(changeSubTitleToTeal(notification:)),
+            name: tealNotificationName,
+            object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(changeEmojiAccordingToTeal(notification:)),
+            name: tealNotificationName,
+            object: nil
+        )
 
         let pinkNotificationName = Notification.Name(rawValue: ObserverKeys.pink)
-        NotificationCenter.default.addObserver(self, selector: #selector(changeSubTitleToPink(notification:)), name: pinkNotificationName, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(changeSubTitleToPink(notification:)),
+            name: pinkNotificationName,
+            object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(changeEmojiAccordingToPink(notification:)),
+            name: pinkNotificationName,
+            object: nil
+        )
     }
 
     // MARK: - Auto Layout
     private func configUI() {
         self.backgroundColor = .clear
 
+        emoji.text = "🗽"
+        emoji.font = emoji.font.withSize(40)
+
         titleLabel.text = "Background Color..."
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 30)
         titleLabel.textColor = .white
 
         subTitleLabel.text = "Teal"
         subTitleLabel.font = UIFont.boldSystemFont(ofSize: 120)
         subTitleLabel.textColor = .white
 
+        self.addSubview(emoji)
+        emoji.snp.makeConstraints { (make) in
+            make.leading.trailing.top.equalToSuperview()
+        }
+
         self.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
-            make.leading.trailing.top.equalToSuperview()
+            make.top.equalTo(emoji.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview()
         }
 
         self.addSubview(subTitleLabel)
@@ -64,14 +99,18 @@ class TitleAndTextView: UIView {
 
     // MARK: - Actions
     @objc func changeSubTitleToTeal(notification: Notification) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.subTitleLabel.text = "Teal"
-        })
+        self.subTitleLabel.text = "Teal"
+    }
+
+    @objc func changeEmojiAccordingToTeal(notification: Notification) {
+        self.emoji.text = "🗽"
     }
 
     @objc func changeSubTitleToPink(notification: Notification) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.subTitleLabel.text = "Pink"
-        })
+        self.subTitleLabel.text = "Pink"
+    }
+
+    @objc func changeEmojiAccordingToPink(notification: Notification) {
+        self.emoji.text = "💕"
     }
 }
