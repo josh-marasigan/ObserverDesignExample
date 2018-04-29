@@ -2,8 +2,11 @@
 This repo consists of a simple iOS sample application for the Observer design pattern
 
 ### Screenshots:
-![alt text](https://github.com/josh-marasigan/ObserverDesignExample/blob/master/AppExample.gif "App Screenshots")
 
+<p align="center">
+<img src="https://github.com/josh-marasigan/ObserverDesignExample/blob/master/AppExample.gif" width="187" height="333" />
+ </p>
+ 
 ## Dependencies
 This sample app does require SnapKit for auto layout. So please install via cocoapod prior to building.
 
