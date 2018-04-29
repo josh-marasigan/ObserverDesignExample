@@ -4,7 +4,7 @@ This repo consists of a simple iOS sample application for the Observer design pa
 ### Screenshots:
 
 <p align="center">
-<img src="https://github.com/josh-marasigan/ObserverDesignExample/blob/master/AppExample.gif" width="187" height="333" />
+<img src="https://github.com/josh-marasigan/ObserverDesignExample/blob/master/AppExample.gif" width="375" height="667" />
  </p>
  
 ## Dependencies
