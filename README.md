@@ -2,9 +2,9 @@
 This repo consists of a simple iOS sample application for the Observer design pattern.
 Observers are notified of events via [Notification](https://developer.apple.com/documentation/foundation/notification) and are registered via [NotificationCenter](https://developer.apple.com/documentation/foundation/notificationcenter).
 
-<p align="center">
  ### Screenshots
 
+<p align="center"><br><br>
 <img src="https://github.com/josh-marasigan/ObserverDesignExample/blob/master/AppExample.gif" width="375" height="667" />
  </p>
  
