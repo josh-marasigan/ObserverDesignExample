@@ -21,7 +21,7 @@ To do this, we will be using the Notifications Framework to subscribe objects to
 and to send Notifications/events from one object to the other.
 
 <p align="center">
-![Diagram Image](https://imgur.com/a/DKkFDO2)
+ <img src="https://i.imgur.com/0vsuLkS.png" width="250" height="580" />
 </p>
  
 ## Dependencies
