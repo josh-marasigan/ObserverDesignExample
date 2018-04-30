@@ -6,8 +6,7 @@ Observers are notified of events via [Notification](https://developer.apple.com/
  * This project was made for the purpose of explaining the main concepts within a simple Swift implementation of the Observer Pattern.
  * Please refer to [the associated article](https://medium.com/@joshmarasigan/the-beacons-are-lit-an-observer-design-pattern-guide-in-swift-8089bf1310cf) to find out how it was made and why it was made the way it is.
 
-<p align="center"> ### Screenshots </p>
-
+<p style="font-size:25px;" align="center"><strong> Screenshots </strong></p><br>
 <p align="center"><br><br>
 <img src="https://github.com/josh-marasigan/ObserverDesignExample/blob/master/AppExample.gif" width="375" height="667" />
 </p>
