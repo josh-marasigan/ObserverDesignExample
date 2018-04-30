@@ -15,7 +15,7 @@ Observers are notified of events via [Notification](https://developer.apple.com/
 ## Diagram
 
 <p align="center">
-<img src="https://imgur.com/a/DKkFDO2" width="252" height="580" />
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/DKkFDO2"><a href="//imgur.com/DKkFDO2"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </p>
  
 ## Dependencies
