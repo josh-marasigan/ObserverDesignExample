@@ -14,8 +14,14 @@ Observers are notified of events via [Notification](https://developer.apple.com/
  
 ## Diagram
 
+We’ll have a button (Subject) that will be notifying an Observer (an arbitrary view containing some labels) of it’s changes. 
+In order for the view to receive notifications from this button, it will have to first subscribe to it.
+
+To do this, we will be using the Notifications Framework to subscribe objects to one another 
+and to send Notifications/events from one object to the other.
+
 <p align="center">
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/DKkFDO2"><a href="//imgur.com/DKkFDO2"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![Diagram Image](https://imgur.com/a/DKkFDO2)
 </p>
  
 ## Dependencies
